@@ -39,6 +39,11 @@
         </div>
         <div class="row ">
             <div class="col-lg-6 col-sm-12 m-auto bg-info">
+                <p class="display-4 text-center">Currency Convertor</p>
+            </div>
+        </div>
+        <div class="row ">
+            <div class="col-lg-6 col-sm-12 m-auto bg-info">
                 <div class="row">
                     <div class="col-6 border">
                         <div class="row">
@@ -48,21 +53,9 @@
                             <div class="col-12 my-4 text-center">
                                 <select class="myselect1">
                                     <option value="">--Select--</option>
-                                    <option value="INR">Indian rupee</option>
-                                    <option value="USD">US dollar</option>
-                                    <option value="GBP">British Pound</option>
-                                    <option value="PKR">Pakistani Rupee</option>
-                                    <option value="EUR">Europian Dollar</option>
-                                    <option value="JPY">Japanese Yen</option>
-                                    <option value="CAD">Canadian Dollar</option>
-                                    <option value="AFN">Europian Afgani Afgani</option>
-                                    <option value="JPY">Japanese Yen</option>
-                                    <option value="ALL">Albanian lek</option>
+                                    
                                 </select>
                             </div>
-                            <!-- <div class="col-12 my-4 text-center">
-                                <button type="button" id="select1">Select</button>
-                            </div> -->
                         </div>
                     </div>
                     <div class="col-6 border">
@@ -72,123 +65,23 @@
                             </div>
                             <div class="col-12 my-4 text-center">
                                 <select class="myselect2">
-                                    <option value="">--Select--</option>
-                                    <option value="INR">Indian rupee</option>
-                                    <option value="EUR">US dollar</option>
-                                    <option value="GBP">British Pound</option>
-                                    <option value="PKR">Pakistani Rupee</option>
-                                    <option value="PKR">Europian Dollar</option>
-                                    <option value="JPY">Japanese Yen</option>
-                                    <option value="CAD">Canadian Dollar</option>
-                                    <option value="AFN">Europian Afgani Afgani</option>
-                                    <option value="JPY">Japanese Yen</option>
-                                    <option value="ALL">Albanian lek</option>
+                                    <option value="">--Select--</option>                                   
                                 </select>
                             </div>
-                            <!-- <div class="col-12 my-4 text-center">
-                                <button type="button" id="select2">Select</button>    
-                            </div> -->
                         </div>
                     </div>
                     <div class="col-12">
                         <div class="row">
                             <div class="col-12 my-4 text-center">
-                                <button type="button" id="btn1">Submit</button>
-                            
+                                <button type="button" id="btn1">Submit</button>                            
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-        
-    </div>
-    
+        </div>        
+    </div>    
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <script>
-    $(document).ready(function(){
-      //creating function to get the data from api after the first select menu-1 is selected
-        function getUserData1(){
-            event.preventDefault()
-            var a=$('.myselect1').val()
-            var newdata1=null
-            var xhr = new XMLHttpRequest();
-            xhr.open('GET','http://apilayer.net/api/live?access_key=4d98b72593c39a68b5185babdeaa7457&currencies='+a+'&source=USD&format=1');
-            xhr.send()
-            xhr.onload = function (){
-                if(xhr.status==200){
-                    newdata1=JSON.parse(xhr.response)
-                    
-                  console.log(newdata1)
-                  saveData(newdata1)
-                    // return newdata
-                       
-                }
-                else{
-                    console.log("Error Code is:" + xhr.status)
-                }
-            }
-        }
-        $('.myselect1').change(function(){
-            getUserData1()
-        })
-        // $('#select1').click(function(){
-        //       getUserData1()
-        //  //console.log(newdata1)
-        // })
-        //creating function to get the data from api after the first select menu-2 is selected
-        function getUserData2(){
-            event.preventDefault()
-            var b=$('.myselect2').val()
-            var newdata2=null
-            var xhr = new XMLHttpRequest();
-            xhr.open('GET','http://apilayer.net/api/live?access_key=4d98b72593c39a68b5185babdeaa7457&currencies='+b+'&source=USD&format=1');
-            xhr.send()
-            xhr.onload = function (){
-                if(xhr.status==200){
-                    newdata2=JSON.parse(xhr.response)
-                    
-                   console.log(newdata2)
-                     saveData(newdata2)
-                       
-                }
-                else{
-                    console.log("Error Code is:" + xhr.status)
-                }
-            }
-        }
-        $('.myselect2').change(function(){
-            getUserData2()
-        })
-        // $('#select2').click(function(){
-        //        getUserData2()
-       
-        // })
-        //creating a call back function to store the specific value(quotes object value) 
-        var arr=[]
-
-       function saveData(imp){
-        for(key in imp.quotes){
-            arr.push(imp.quotes[key])
-        }
-       }
-       //console.log(arr)
-
-     //creating function to convert our value into required currency 
-       function convertor(){
-           var first=Number(arr[0])
-           var second=Number(arr[1])
-
-           var inputValue1=$('#value1').val()
-
-           var result=(second/first)*Number(inputValue1)
-           $('#value2').val(result)
-           arr=[]
-        }
-
-        $('#btn1').click(convertor)
-      
-    });
-</script>
+    <script src="script.js"></script>
 </body>
 </html>
