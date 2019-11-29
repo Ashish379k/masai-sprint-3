@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        .cont{
+            background:#00acc1;
+        }
+      
+    </style>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container-fluid cont">
+        <div class="row">
+                <img class="col-2 bg-success" id="logo" src="1.png" alt="logo"/>
+            <div class="col-10 bg-success text-center">
+                <h1 class="text-dark my-4">Masai Stock Exchange</h1>
+            </div>
+        </div>
+            <div class="row">
+                <div class="col border bg-light">
+                    <nav class="navbar navbar-expand-sm col-12 ">
+                            <ul class="navbar-nav">
+                            <li class="nav-item">
+                                <a class="nav-link bg-success"  href="#">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="http://127.0.0.1:5500/currencyConvertor.html">Convertor</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">About</a>
+                            </li>
+                            </ul>
+                    </nav>
+                </div>
+            </div>
+        
+        <div class="row">
+            <div class="col-6">
+                <div class="reg col-12 m-auto">
+                        <form>
+                                <div class="form-group mt-4">
+                                    <label class="col-4 mt-4" for="Name">Name:</label>
+                                    <input  class="col-7 mt-4 fillData" type="text" class="form-control" id="Name" placeholder="Enter your Full Name">
+                                </div>
+                                <div class="form-group">
+                                    <label class="col-4 mt-2" for="dob">Mobile:</label>
+                                    <input class="col-7 mt-2 fillData" type="text" class="form-control" id="dob" placeholder="mobile no">
+                                </div>
+                                <div class="form-group">
+                                    <label class="col-4 mt-2" for="Email1">Email address:</label>
+                                    <input class="col-7 mt-2 fillData" type="email" class="form-control" id="Email1" placeholder="Enter email">
+                                </div>
+                                <div class="form-group">
+                                        <label class="col-4 mt-2" for="userName">User Name:</label>
+                                        <input class="col-7 mt-2 fillData" type="text" class="form-control" id="userName" placeholder="Username">
+                                    </div>
+                                <div class="form-group">
+                                    <label class="col-4 mt-2" for="Password">New Password:</label>
+                                    <input class="col-7 mt-2 fillData" type="password" class="form-control" id="Password" placeholder="Password">
+                                </div>
+                                <div class="form-group">
+                                        <label class="col-4 mt-2" for="Desc">Description:</label>
+                                        <input class="col-7 mt-2 fillData" type="text" class="form-control" id="Desc" placeholder="Description">
+                                </div>
+                                <div class="row">
+                                    <div class="col text-center">
+                                        <button type="button" id="btn1" class="btn btn-primary mb-4">Submit</button>
+                                    </div>
+                                            
+                                    </div>
+                                    
+                            </form>
+                </div>
+            </div>
+            <div class="col-6">
+                <div class="log col-12 m-auto">
+                        <form>
+                            <div class="form-group row mt-4">
+
+                                <label for="user" class="col-sm-4 form-label mt-4">User name</label>
+                                
+                                    <input type="email" class="form-control mt-4 col-sm-6" id="mail" placeholder="Usename">
+                                
+                            </div>
+                                <div class="form-group row">
+                                <label for="pwd" class="col-sm-4 col-form-label">Password</label>
+                                
+                                    <input type="password" class="form-control col-sm-6" id="inputPassword3" placeholder="Password">
+                                
+                            </div>
+                            <div class="col text-center">
+                                    <button type="button" id="btn1" class="btn btn-primary mb-4">Submit</button>
+                            </div>
+
+                        </form>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    
+</body>
+</html>
