@@ -39,9 +39,7 @@ $(document).ready(function(){
                 listd.innerHTML=cntArr[i]
                 listd.setAttribute('value',valArr[i])
                 var s=document.querySelector('.myselect1')
-               // var t=document.getElementById('myselect2')
                 s.appendChild(listd)
-               // t.appendChild(listd)
             }
         for(var i=0;i<valArr.length;i++){
                 var listd=document.createElement('option')
@@ -52,7 +50,6 @@ $(document).ready(function(){
                // s.appendChild(listd)
                 t.appendChild(listd)
             }
-           // alert('valuerec')
         })
 //creating function to get the data from api after the first select menu is selected
       function getUserData1(){
@@ -105,10 +102,6 @@ $(document).ready(function(){
       $('.myselect2').change(function(){
           getUserData2()
       })
-      
-     
-    
-     //console.log(arr)
 
    //creating function to convert our value into required currency 
      function convertor(){
@@ -127,9 +120,6 @@ $(document).ready(function(){
           $('.myselect1').val('')
           $('.myselect2').val('')
       })
-    
-
-    
 
  //creating a call back function to store the specific value(quotes object value) 
         var arr=[]
@@ -138,11 +128,5 @@ $(document).ready(function(){
              arr.push(imp.quotes[key])
          }
         }
-
-     
-    
-           
-        
-
-       
+  
   });
