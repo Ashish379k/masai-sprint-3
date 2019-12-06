@@ -78,7 +78,9 @@ $(document).ready(function(){
     }
     $('#submitButton').click(function(){
         convertor()
-        $('#onSelect1').val('')
-        $('#onSelect2').val('')
+     
+        
+       
+       
     })
 });
